@@ -1,9 +1,46 @@
-# React + Vite
+# Rodrigo Enter - Corderhouse - Curso React Js
+-------------------------
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Primera pre-entrega. Clases:
 
-Currently, two official plugins are available:
+### 1- Introducción a React Js.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# blackbird_store
+### 2- Instalación y configuración del entorno.
+
+### 3- JSX y transpiling.
+
+### 4- Componentes I.
+-------------------------
+
+## Recursos utilizados:
+
+- Visual Studio Code.
+- HTML.
+- CSS.
+- JavaScript.
+- React Js.
+- Adobe Illustrator
+
+![VisualStudioCode](https://img.icons8.com/color/96/000000/visual-studio-code-2019.png)
+![HTML](https://img.icons8.com/color/96/000000/html-5.png)
+![CSS](https://img.icons8.com/color/96/000000/css3.png)
+![JavaScript](https://img.icons8.com/color/96/000000/javascript.png)
+![ReactJs](https://img.icons8.com/office/40/react.png)
+![AdobeIllustrator](https://img.icons8.com/color/96/000000/adobe-illustrator.png)
+
+-------------------------
+
+##### Versión:
+
+```sh
+1.0.0
+```
+-------------------------
+
+##### Creado por:
+
+[Rodrigo Enter](https://github.com/rodrigoenter) - Diseñador gráfico/Ux-Ui
+
+-------------------------
+
+###### **Este proyecto representa una página sobre venta de artículos musicales, generada para el curso de React Js de la plataforma Coderhouse.**
