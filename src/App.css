@@ -18,6 +18,6 @@
   .item-list-container {
     height: calc(100vh - 350px);
     padding: 20px;
-    font-size: 1.5rem;
+    font-size: 25px;
   }
 }
