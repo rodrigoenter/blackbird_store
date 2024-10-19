@@ -25,7 +25,7 @@
 ![HTML](https://img.icons8.com/color/96/000000/html-5.png)
 ![CSS](https://img.icons8.com/color/96/000000/css3.png)
 ![JavaScript](https://img.icons8.com/color/96/000000/javascript.png)
-![ReactJs](https://img.icons8.com/color/48/react-native.png)
+![ReactJs](https://img.icons8.com/color/96//00000/react-native.png)
 ![AdobeIllustrator](https://img.icons8.com/color/96/000000/adobe-illustrator.png)
 
 -------------------------
