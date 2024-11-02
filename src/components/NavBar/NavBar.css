@@ -17,7 +17,7 @@
 
 .nav-links-container {
     display: flex;
-    gap: 80px;
+    gap: 40px;
     align-items: center;
     width: 100%;
     justify-content: center;
@@ -25,28 +25,27 @@
     margin-bottom: 10px;
 }
 
-.nav-links-container a {
+.nav-button {
+    font-size: medium;
     color: black;
-    text-decoration: none;
-    margin: 0 20.8px;
+    background: none;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
-.nav-links-container a:hover {
-    text-decoration: none;
+.nav-button:hover {
     background-color: #c7baf7;
+    border-color: #663399;
+    transform: scale(1.1);
 }
 
 .nav-links {
     display: flex;
     flex-direction: row;
-}
-
-.nav-links a {
-    transition: transform 0.3s ease-in-out;
-}
-
-.nav-links a:hover {
-    transform: scale(1.1);
 }
 
 .right-section {
@@ -57,7 +56,7 @@
     margin-left: auto;
 }
 
-.right-section a {
+.right-section button {
     display: flex;
     align-items: center;
     padding: 5px;
@@ -66,14 +65,13 @@
     border: none;
 }
 
-.right-section img {
-    height: 25px;
+.right-section button:hover {
+    transform: scale(1.1);
 }
 
-.right-section a:hover {
-    transform: scale(1.1);
-    background-color: transparent;
-    border: none;
+.right-section img {
+    height: 25px;
+    cursor: pointer;
 }
 
 .right-section .login {
@@ -81,12 +79,13 @@
     border: 1px solid #663399;
     border-radius: 20px;
     background-color: transparent;
+    color: black;
+    text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .right-section .login:hover {
     background-color: #c7baf7;
-    border: 1px solid #663399;
 }
 
 .right-section .account-icon {
@@ -102,7 +101,6 @@
 }
 
 .cart-widget:hover {
-    transform: scale(1.1);
     background-color: transparent;
     border: none;
 }
@@ -163,13 +161,13 @@
 
     .nav-links {
         flex-direction: column;
-        gap: 32px;
+        gap: 16px;
         align-items: center;
     }
 
     .right-section {
         flex-direction: row;
-        gap: 32px;
+        gap: 16px;
         align-items: center;
         justify-content: space-evenly;
         width: 100%;
@@ -195,7 +193,7 @@
         gap: 16px;
     }
 
-    .nav-links-container a {
+    .nav-button {
         padding: 0 5px;
     }
 

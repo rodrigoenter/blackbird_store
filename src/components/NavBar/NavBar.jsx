@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
 import Brand from './Brand';
 import accountIcon from '../../assets/images/my_account.svg';
@@ -6,6 +7,15 @@ import CartWidget from './CartWidget';
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleCategoryClick = (categoryId) => {
+    navigate(`/category/${categoryId}`);
+  };
+
+  const handleNavigation = (path) => {
+    navigate(path);
+  };
 
   return (
     <nav className="NavBar">
@@ -19,19 +29,54 @@ const NavBar = () => {
       </button>
       <div className={`nav-links-container ${menuOpen ? 'open' : ''}`}>
         <div className="nav-links">
-          <a href="#Música">Música</a>
-          <a href="#Instrumentos">Instrumentos</a>
-          <a href="#Accesorios">Accesorios</a>
-          <a href="#Electro">Electro</a>
+          <>
+            <button
+              onClick={() => handleCategoryClick('musica')}
+              className="btn nav-button"
+            >
+              Música
+            </button>
+            <button
+              onClick={() => handleCategoryClick('instrumentos')}
+              className="btn nav-button"
+            >
+              Instrumentos
+            </button>
+            <button
+              onClick={() => handleCategoryClick('accesorios')}
+              className="btn nav-button"
+            >
+              Accesorios
+            </button>
+            <button
+              onClick={() => handleCategoryClick('electro')}
+              className="btn nav-button"
+            >
+              Electro
+            </button>
+          </>
         </div>
         <div className="right-section">
-          <a href="#cuenta" className="account-icon">
-            <img src={accountIcon} alt="Mi Cuenta" />
-          </a>
-          <a href="#carrito">
-            <CartWidget />
-          </a>
-          <a href="#login" className="login">Login</a>
+          <>
+            <button
+              onClick={() => handleNavigation('/account')}
+              className="account-icon btn"
+            >
+              <img src={accountIcon} alt="Mi Cuenta" />
+            </button>
+            <button
+              onClick={() => handleNavigation('/cart')}
+              className="btn"
+            >
+              <CartWidget />
+            </button>
+            <button
+              onClick={() => handleNavigation('/login')}
+              className="login btn nav-button"
+            >
+              Login
+            </button>
+          </>
         </div>
       </div>
     </nav>
