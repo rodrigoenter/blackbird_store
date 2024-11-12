@@ -4,20 +4,204 @@
   flex-direction: column;
 }
 
-/* ItemListContainer */
 .item-list-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: calc(100vh - 300px);
-  color: #663399;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
   text-align: center;
+  margin-top: 300px;
+  margin-bottom: 30px;
+  background-color: #ffffff;
+
 }
 
-@media (max-width: 480px) {
-  .item-list-container {
-    height: calc(100vh - 350px);
-    padding: 20px;
-    font-size: 25px;
-  }
+.item-list-container h1 {
+  font-size: 28px;
+  color: #663399;
+  margin-bottom: 50px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+}
+
+.product-list p {
+  font-size: 18px;
+  color: #777777;
+  margin-top: 20px;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #f7f7f7;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 20px;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+.product-card p {
+  font-size: 16px;
+  color: #663399;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.product-card .btn-primary {
+  background-color: #663399;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  text-decoration: none;
+}
+
+.product-card .btn-primary:hover {
+  background-color: #c7baf7;
+  color: #663399;
+}
+
+.item-detail-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 300px;
+  margin-bottom: 30px;
+}
+
+.item-detail-container h1 {
+  font-size: 28px;
+  color: #663399;
+  margin-bottom: 30px;
+}
+
+.item-detail-container img {
+  width: 50%;
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+
+.item-detail-container p {
+  font-size: 16px;
+  color: black;
+  margin-bottom: 30px;
+}
+
+.item-detail-container p:nth-child(3) {
+  font-size: 25px;
+  font-weight: 600;
+  color: #663399;
+  font-style: italic;
+}
+
+/* Estilo para el contenedor de la cantidad */
+.quantity-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+/* Estilo para los botones de cantidad */
+.btn-quantity {
+  background-color: #663399;
+  color: #FFF9EA;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-quantity:hover {
+  background-color: #c7baf7;
+}
+
+.btn-quantity:active {
+  background-color: #663399;
+}
+
+/* Estilo para mostrar la cantidad */
+.quantity-value {
+  font-size: 20px;
+  font-weight: 600;
+  color: #663399;
+}
+
+/* Estilo del botón agregar al carrito */
+.boton-carrito {
+  background-color: #663399;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+.boton-carrito:hover {
+  background-color: #c7baf7;
+  color: #663399;
+}
+
+.boton-carrito:active {
+  background-color: #663399;
+}
+
+.under-construction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 75vh;
+  background-color: #FFFFFF;
+}
+
+.under-construction h1 {
+  font-size: 32px;
+  color: #663399;
+}
+
+.under-construction p {
+  font-size: 19px;
+  color: black;
+  font-family: 'Habibi', serif;
 }

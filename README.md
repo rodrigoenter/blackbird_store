@@ -11,6 +11,18 @@
 
 ### 4- Componentes I.
 -------------------------
+## Segunda pre-entrega. Clases:
+
+### 5- Componentes II.
+
+### 6- Promises, asincronía y MAP.
+
+### 7- Consumiendo API's.
+
+### 8- Workshop: Hooks, Children y Patrones.
+
+### 9- Routing y navegación.
+-------------------------
 
 ## Recursos utilizados:
 
@@ -18,14 +30,23 @@
 - HTML.
 - CSS.
 - JavaScript.
-- React Js.
+- Node.js
+- React.
+- Vite.
+- GitHub.
+- Materialize
 - Adobe Illustrator
+- React-Toastify
 
 ![VisualStudioCode](https://img.icons8.com/color/96/000000/visual-studio-code-2019.png)
 ![HTML](https://img.icons8.com/color/96/000000/html-5.png)
 ![CSS](https://img.icons8.com/color/96/000000/css3.png)
 ![JavaScript](https://img.icons8.com/color/96/000000/javascript.png)
-![ReactJs](https://img.icons8.com/color/96//00000/react-native.png)
+![Node.js](https://img.icons8.com/color/96/nodejs.png)
+![React](https://img.icons8.com/color/96//00000/react-native.png)
+![Vite](https://img.icons8.com/fluency/96/vite.png)
+![GitHub](https://img.icons8.com/windows/96/github.png)
+![Materialize](https://img.icons8.com/material-two-tone/96/materialize.png)
 ![AdobeIllustrator](https://img.icons8.com/color/96/000000/adobe-illustrator.png)
 
 -------------------------
