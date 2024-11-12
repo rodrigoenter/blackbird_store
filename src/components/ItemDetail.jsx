@@ -22,7 +22,25 @@ const ItemDetail = () => {
         const productToAdd = { ...item, quantity };
         setCart(prevCart => [...prevCart, productToAdd]);
 
-        toast.success(`Agregaste ${quantity} unidades de "${item.name}" al carrito.`);
+        toast.success(`Agregaste ${quantity} unidades de "${item.name}" al carrito.`, {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+            style: {
+                backgroundColor: "#FFFFFF",
+                color: "#663399",
+                fontWeight: "400",
+                fontFamily: "'Habibi', serif",
+                borderRadius: "20px",
+                padding: "10px 20px",
+                fontSize: "16px",
+            },
+            icon: true,
+        });
     };
 
     if (!item) return <p>Producto no encontrado</p>;
