@@ -6,7 +6,7 @@ import AccountPage from './pages/AccountPage';
 import CartPage from './pages/CartPage';
 import LoginPage from './pages/LoginPage';
 import ItemListContainer from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemDetail from './components/ItemDetail';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ItemListContainer />} />
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
-        <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+        <Route path="/item/:itemId" element={<ItemDetail />} />
         <Route path="/account" element={<AccountPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/login" element={<LoginPage />} />

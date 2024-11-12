@@ -73,7 +73,7 @@ export const products = [
     },
     {
         id: 10,
-        name: "Controlador Dj Pioneer DDJ-SX2",
+        name: "Controlador DJ Pioneer DDJ-SX2",
         price: 1500000,
         category: "electro",
         image: "/products/pioneer_ddj_sx2.png",
@@ -93,6 +93,30 @@ export const products = [
         price: 149000,
         category: "electro",
         image: "/products/tocadiscos.png",
-        description: "Reproductor de discos de vinilo vintage BT, USB y grabación con soporte de 33/45/78RPM",
+        description: "Reproductor de discos de vinilo vintage BT, USB y grabación con soporte de 33/45/78RPM.",
     },
 ];
+
+export const getProducts = () => {
+    return new Promise((resolve) => {
+        setTimeout(() => resolve(products), 500);
+    });
+};
+
+export const getProductsByCategory = (categoryId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const filteredProducts = products.filter(product => product.category === categoryId);
+            resolve(filteredProducts);
+        }, 500);
+    });
+};
+
+export const getProductById = (itemId) => {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            const product = products.find(product => product.id === parseInt(itemId));
+            resolve(product);
+        }, 500);
+    });
+};

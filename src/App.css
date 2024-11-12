@@ -2,8 +2,10 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: #FFFFFF;
 }
 
+/* Contenedor ItemListContainer */
 .item-list-container {
   max-width: 1000px;
   margin: 0 auto;
@@ -11,27 +13,21 @@
   text-align: center;
   margin-top: 300px;
   margin-bottom: 30px;
-  background-color: #ffffff;
-
 }
 
-.item-list-container h1 {
+.item-list-container h1,
+.item-detail-container h1 {
   font-size: 28px;
   color: #663399;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
+/* Estilo para tarjetas de productos */
 .product-list {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
-}
-
-.product-list p {
-  font-size: 18px;
-  color: #777777;
-  margin-top: 20px;
 }
 
 .product-card {
@@ -68,7 +64,8 @@
   margin-bottom: 30px;
 }
 
-.product-card .btn-primary {
+/* Botón principal */
+.btn-primary {
   background-color: #663399;
   color: #FFFFFF;
   border: none;
@@ -82,11 +79,18 @@
   text-decoration: none;
 }
 
-.product-card .btn-primary:hover {
+.btn-primary:hover,
+.boton-carrito:hover {
   background-color: #c7baf7;
   color: #663399;
 }
 
+.btn-primary:active,
+.boton-carrito:active {
+  background-color: #663399;
+}
+
+/* Contenedor ItemDetail */
 .item-detail-container {
   max-width: 600px;
   margin: 0 auto;
@@ -99,71 +103,16 @@
   margin-bottom: 30px;
 }
 
-.item-detail-container h1 {
-  font-size: 28px;
-  color: #663399;
-  margin-bottom: 30px;
-}
-
-.item-detail-container img {
-  width: 50%;
-  height: auto;
-  object-fit: contain;
-  margin-bottom: 30px;
-}
-
-.item-detail-container p {
-  font-size: 16px;
-  color: black;
-  margin-bottom: 30px;
-}
-
-.item-detail-container p:nth-child(3) {
-  font-size: 25px;
-  font-weight: 600;
-  color: #663399;
-  font-style: italic;
-}
-
-/* Estilo para el contenedor de la cantidad */
+/* Componente ItemCount */
 .quantity-container {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 15px;
   margin-bottom: 30px;
+  margin-top: 30px;
 }
 
-/* Estilo para los botones de cantidad */
-.btn-quantity {
-  background-color: #663399;
-  color: #FFF9EA;
-  border: none;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  font-size: 15px;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-quantity:hover {
-  background-color: #c7baf7;
-}
-
-.btn-quantity:active {
-  background-color: #663399;
-}
-
-/* Estilo para mostrar la cantidad */
-.quantity-value {
-  font-size: 20px;
-  font-weight: 600;
-  color: #663399;
-}
-
-/* Estilo del botón agregar al carrito */
 .boton-carrito {
   background-color: #663399;
   color: #FFFFFF;
@@ -174,34 +123,64 @@
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-top: 20px;
+  text-decoration: none;
 }
 
-.boton-carrito:hover {
+.btn-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #663399;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-quantity:hover {
   background-color: #c7baf7;
   color: #663399;
 }
 
-.boton-carrito:active {
+.btn-quantity:active {
   background-color: #663399;
 }
 
+.quantity-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #663399;
+  border: 1px solid #c7baf7;
+  border-radius: 10px;
+}
+
+/* Estilos para mensaje de construcción */
 .under-construction {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 75vh;
+  margin-top: 350px;
   background-color: #FFFFFF;
 }
 
 .under-construction h1 {
-  font-size: 32px;
+  font-size: 28px;
   color: #663399;
 }
 
 .under-construction p {
-  font-size: 19px;
+  font-size: 18px;
   color: black;
   font-family: 'Habibi', serif;
 }

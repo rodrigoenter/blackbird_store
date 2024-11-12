@@ -10,13 +10,13 @@ const styles = {
     boxShadow: '0px 1px 2px rgba(0, 0, 0, 0.1)',
     textAlign: 'left',
     border: '1px solid #f7f7f7',
-    marginTop: '300px',
+    marginTop: '310px',
     marginBottom: '30px',
   },
   title: {
-    fontSize: '24px',
+    fontSize: '28px',
     marginBottom: '30px',
-    color: '#000000',
+    color: '#663399',
     textAlign: 'center',
   },
   form: {
@@ -42,7 +42,7 @@ const styles = {
     padding: '10px',
     fontSize: '16px',
     backgroundColor: '#663399',
-    color: '#FFF9EA',
+    color: '#FFFFFF',
     border: 'none',
     borderRadius: '50px',
     cursor: 'pointer',
@@ -50,7 +50,7 @@ const styles = {
     fontFamily: 'Habibi, serif',
   },
   buttonHover: {
-    color: '#000000',
+    color: '#663399',
     backgroundColor: '#c7baf7',
   },
   links: {

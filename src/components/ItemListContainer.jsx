@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { products } from '../../asyncmock';
+import { getProducts, getProductsByCategory } from '../../asyncmock';
 import ProductCard from './ProductCard';
 
 const ItemListContainer = () => {
@@ -8,29 +8,20 @@ const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    if (categoryId) {
-      setItems(products.filter(product => product.category === categoryId));
-    } else {
-      setItems(products);
-    }
+    const fetchData = async () => {
+      const data = categoryId ? await getProductsByCategory(categoryId) : await getProducts();
+      setItems(data);
+    };
+    fetchData();
   }, [categoryId]);
 
   const getCategoryContent = () => {
-    if (!categoryId) {
-      return 'Bienvenid@s a nuestra tienda 🛒';
-    }
-
     switch (categoryId) {
-      case 'musica':
-        return 'Encontrá acá la mejor música 🎵';
-      case 'instrumentos':
-        return 'Tenemos los mejores instrumentos 🎸';
-      case 'accesorios':
-        return 'Accesorios indispensables para vos 🎧';
-      case 'electro':
-        return 'Electrónica de alta calidad ⚡';
-      default:
-        return 'Categoría no encontrada';
+      case 'musica': return 'Encontrá acá la mejor música 🎵';
+      case 'instrumentos': return 'Tenemos los mejores instrumentos 🎸';
+      case 'accesorios': return 'Accesorios indispensables para vos 🎧';
+      case 'electro': return 'Electrónica de alta calidad ⚡';
+      default: return 'Bienvenid@s a nuestra tienda 🛒';
     }
   };
 
