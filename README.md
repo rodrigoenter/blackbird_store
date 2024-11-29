@@ -1,5 +1,7 @@
-# Rodrigo Enter - Corderhouse - Curso React Js
--------------------------
+[![Blackbird](https://iili.io/2a6xRnI.png "Blackbird Music Store")]
+(https://github.com/rodrigoenter/blackbird_store "Blackbird")
+
+**¿Buscás un nuevo instrumento, un vinilo difícil de encontrar o simplemente querés explorar el mundo de la música? Blackbird Music Store es tu lugar. Descubrí una selección cuidadosamente seleccionada de productos de las mejores marcas y encontrá todo lo que necesitas para liberar tu creatividad.**
 
 ## Primera pre-entrega. Clases:
 
@@ -10,7 +12,7 @@
 ### 3- JSX y transpiling.
 
 ### 4- Componentes I.
--------------------------
+
 ## Segunda pre-entrega. Clases:
 
 ### 5- Componentes II.
@@ -22,21 +24,35 @@
 ### 8- Workshop: Hooks, Children y Patrones.
 
 ### 9- Routing y navegación.
--------------------------
 
+## Entrega final. Clases:
+
+### 10- Eventos.
+
+### 11- Context.
+
+### 12- Técnicas de rendering.
+
+### 13- Firebase I.
+
+### 14-  Firebase II.
+
+### 15- Workshop final.
+
+-------------------------
 ## Recursos utilizados:
 
-- Visual Studio Code.
-- HTML.
-- CSS.
-- JavaScript.
-- Node.js
-- React.
-- Vite.
-- GitHub.
-- Materialize
-- Adobe Illustrator
-- React-Toastify
+- [Visual Studio Code] (https://code.visualstudio.com)
+- [HTML] (https://lenguajehtml.com)
+- [CSS] (https://lenguajecss.com/css/)
+- [JavaScript] (https://lenguajejs.com/javascript/)
+- [Node.js] (https://nodejs.org/es)
+- [React] (https://es.react.dev)
+- [Vite] (https://vite.dev)
+- [GitHub] (https://github.com)
+- [Materialize] (https://materializecss.com)
+- [Adobe Illustrator] (https://www.adobe.com/home)
+- [React-Toastify] (https://www.npmjs.com/package/react-toastify)
 
 ![VisualStudioCode](https://img.icons8.com/color/96/000000/visual-studio-code-2019.png)
 ![HTML](https://img.icons8.com/color/96/000000/html-5.png)
@@ -50,6 +66,28 @@
 ![AdobeIllustrator](https://img.icons8.com/color/96/000000/adobe-illustrator.png)
 
 -------------------------
+> En la búsqueda y desarrollo de mejorar la experiencia de usuario, he implementado algunas librerías que resultaron sumamente útiles para mi proyecto:
+
+> Materialize: para  integrar un diseño moderno y con una interfaz amigable.
+`$ npm install materialize-css@next`
+`$ npm install react-materialize`
+
+> SweetAlert: para la creación de ventanas emergentes, que informan de manera clara y precisa al usuario sobre estado de sus procesos.
+`$ npm install sweetalert2`
+
+> Toastify: para informar de modo rápido y sencillo los productos que se agregan al carro,sin interrumpir el flujo de navegación.
+`$ npm install --save react-toastify`
+
+> Oval (React Loader Spinner): para mejorar la experiencia de usuario mediante la indicación de estados de carga, que advierten el procesamiento de datos.
+`$ npm install --save react-spinners`
+
+> jsPDF: para generar documentos PDF directamente desde el navegador, sin depender de servicios externos.
+`$ npm install jspdf --save`
+
+> Firebase: para gestionar el almacenamiento de datos en tiempo real, como la creación de colecciones de productos y ordenes de compra.
+`$ npm install firebase`
+
+>En resumen, estas librerías me permitieron construir una web app moderna y dinámica, ofreciendo una mejor experiencia y simplificando el desarrollo en varios aspectos, desde la interfaz hasta la gestión de datos y la infraestructura.
 
 ##### Versión:
 
@@ -64,4 +102,4 @@
 
 -------------------------
 
-###### **Este proyecto representa una página sobre venta de artículos musicales, generada para el curso de React Js de la plataforma Coderhouse.**
+###### **Este proyecto representa una página _ficticia_ sobre venta de artículos musicales, generada para el curso de React Js de la plataforma Coderhouse.**

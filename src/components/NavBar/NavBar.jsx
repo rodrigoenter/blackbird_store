@@ -1,4 +1,3 @@
-// NavBar.jsx
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './NavBar.css';
@@ -12,10 +11,12 @@ const NavBar = () => {
 
   const handleCategoryClick = (categoryId) => {
     navigate(`/category/${categoryId}`);
+    setMenuOpen(false);
   };
 
   const handleNavigation = (path) => {
     navigate(path);
+    setMenuOpen(false);
   };
 
   return (

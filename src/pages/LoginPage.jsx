@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const styles = {
   container: {
@@ -80,15 +81,20 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [isHover, setIsHover] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(`Email: ${email}, Password: ${password}, Remember Me: ${rememberMe}`);
+    if (email && password) {
+      navigate('/');
+    } else {
+      alert('Por favor, complete todos los campos.');
+    }
   };
 
   return (
     <section style={styles.container}>
-      <h2 style={styles.title}>Iniciar sesión</h2>
+      <h2 style={styles.title}>Iniciar sesión 🔐</h2>
       <form onSubmit={handleSubmit} style={styles.form}>
         <label htmlFor="email" style={styles.label}>Correo electrónico</label>
         <input
