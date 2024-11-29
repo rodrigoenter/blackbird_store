@@ -1,7 +1,8 @@
-[![Blackbird](https://iili.io/2a6xRnI.png "Blackbird Music Store")]
-(https://github.com/rodrigoenter/blackbird_store "Blackbird")
+![Blackbird](https://iili.io/2a6xRnI.png "Blackbird Music Store")
 
-**¿Buscás un nuevo instrumento, un vinilo difícil de encontrar o simplemente querés explorar el mundo de la música? Blackbird Music Store es tu lugar. Descubrí una selección cuidadosamente seleccionada de productos de las mejores marcas y encontrá todo lo que necesitas para liberar tu creatividad.**
+**¿Buscás un nuevo instrumento, un vinilo difícil de encontrar o simplemente querés explorar el mundo de la música? Blackbird Music Store es el lugar indicado para vos. Descubrí una selección cuidadosamente seleccionada de productos de las mejores marcas y encontrá todo lo que necesitas para liberar tu creatividad.**
+
+###### **Este proyecto representa una página _ficticia_ sobre venta de artículos musicales, generada para el curso de React Js de la plataforma Coderhouse.**
 
 ## Primera pre-entrega. Clases:
 
@@ -64,9 +65,9 @@
 ![GitHub](https://img.icons8.com/windows/96/github.png)
 ![Materialize](https://img.icons8.com/material-two-tone/96/materialize.png)
 ![AdobeIllustrator](https://img.icons8.com/color/96/000000/adobe-illustrator.png)
+![Firebase](https://iili.io/20qR5GV.png)
 
--------------------------
-> En la búsqueda y desarrollo de mejorar la experiencia de usuario, he implementado algunas librerías que resultaron sumamente útiles para mi proyecto:
+##### En la búsqueda y desarrollo de mejorar la experiencia de usuario, he implementado algunas librerías que resultaron sumamente útiles para mi proyecto:
 
 > Materialize: para  integrar un diseño moderno y con una interfaz amigable.
 `$ npm install materialize-css@next`
@@ -75,7 +76,7 @@
 > SweetAlert: para la creación de ventanas emergentes, que informan de manera clara y precisa al usuario sobre estado de sus procesos.
 `$ npm install sweetalert2`
 
-> Toastify: para informar de modo rápido y sencillo los productos que se agregan al carro,sin interrumpir el flujo de navegación.
+> Toastify: para informar de modo rápido y sencillo los productos que se agregan al carrito, sin interrumpir el flujo de navegación.
 `$ npm install --save react-toastify`
 
 > Oval (React Loader Spinner): para mejorar la experiencia de usuario mediante la indicación de estados de carga, que advierten el procesamiento de datos.
@@ -87,7 +88,7 @@
 > Firebase: para gestionar el almacenamiento de datos en tiempo real, como la creación de colecciones de productos y ordenes de compra.
 `$ npm install firebase`
 
->En resumen, estas librerías me permitieron construir una web app moderna y dinámica, ofreciendo una mejor experiencia y simplificando el desarrollo en varios aspectos, desde la interfaz hasta la gestión de datos y la infraestructura.
+##### En resumen, todas ellas me permitieron construir una web app moderna y dinámica, ofreciendo una mejor experiencia y simplificando el desarrollo en varios aspectos, desde la interfaz hasta la gestión de datos y la infraestructura.
 
 ##### Versión:
 
@@ -99,7 +100,3 @@
 ##### Creado por:
 
 [Rodrigo Enter](https://github.com/rodrigoenter) - Diseñador gráfico/Ux-Ui
-
--------------------------
-
-###### **Este proyecto representa una página _ficticia_ sobre venta de artículos musicales, generada para el curso de React Js de la plataforma Coderhouse.**
