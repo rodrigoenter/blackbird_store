@@ -1,13 +1,22 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, addDoc, updateDoc, doc, getDoc, getDocs, deleteDoc } from "firebase/firestore";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  updateDoc,
+  doc,
+  getDoc,
+  getDocs,
+  deleteDoc
+} from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAz0OzDT5YlxX49sFguBN4zK2IznNWMSeM",
-  authDomain: "blackbird-store.firebaseapp.com",
-  projectId: "blackbird-store",
-  storageBucket: "blackbird-store.firebasestorage.app",
-  messagingSenderId: "820711519818",
-  appId: "1:820711519818:web:35ab6fa5953b93f5cc98b3"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
