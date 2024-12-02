@@ -51,9 +51,9 @@
 - [React] (https://es.react.dev)
 - [Vite] (https://vite.dev)
 - [GitHub] (https://github.com)
-- [Materialize] (https://materializecss.com)
+- [Firebase] (https://firebase.google.com)
+- [Netlify] (https://www.netlify.com)
 - [Adobe Illustrator] (https://www.adobe.com/home)
-- [React-Toastify] (https://www.npmjs.com/package/react-toastify)
 
 ![VisualStudioCode](https://img.icons8.com/color/96/000000/visual-studio-code-2019.png)
 ![HTML](https://img.icons8.com/color/96/000000/html-5.png)
@@ -63,9 +63,9 @@
 ![React](https://img.icons8.com/color/96//00000/react-native.png)
 ![Vite](https://img.icons8.com/fluency/96/vite.png)
 ![GitHub](https://img.icons8.com/windows/96/github.png)
-![Materialize](https://img.icons8.com/material-two-tone/96/materialize.png)
-![AdobeIllustrator](https://img.icons8.com/color/96/000000/adobe-illustrator.png)
 ![Firebase](https://iili.io/20qR5GV.png)
+![AdobeIllustrator](https://img.icons8.com/color/96/000000/adobe-illustrator.png)
+
 
 ##### En la búsqueda y desarrollo de mejorar la experiencia de usuario, he implementado algunas librerías que resultaron sumamente útiles para mi proyecto:
 
