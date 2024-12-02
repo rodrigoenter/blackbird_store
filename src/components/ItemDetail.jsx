@@ -87,11 +87,19 @@ const ItemDetail = ({ item }) => {
 
       {quantitySelected > 0 && (
         <div className="button-group">
-          <button className="btn btn-primary" onClick={handleFinishPurchase}>
-            Terminar mi compra
-          </button>
-          <button className="btn btn-primary" onClick={handleContinueShopping}>
+          <button
+            className="btn btn-primary"
+            onClick={handleContinueShopping}
+            style={{ fontFamily: 'Habibi, serif' }}
+          >
             Seguir comprando
+          </button>
+          <button
+            className="btn btn-primary"
+            onClick={handleFinishPurchase}
+            style={{ fontFamily: 'Habibi, serif' }}
+          >
+            Ir al carrito
           </button>
         </div>
       )}

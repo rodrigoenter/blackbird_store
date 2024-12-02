@@ -78,6 +78,7 @@
   transition: background-color 0.3s ease;
   margin-top: 20px;
   text-decoration: none;
+  font-family: 'Habibi', serif;
 }
 
 .btn-primary:hover,
@@ -133,6 +134,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   text-decoration: none;
+  font-family: 'Habibi', serif;
 }
 
 .btn-quantity {

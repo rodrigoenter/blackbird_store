@@ -78,6 +78,7 @@ const CartPage = () => {
               <button
                 onClick={() => removeItem(product.id)}
                 disabled={loadingItems[product.id]}
+                style={{ fontFamily: 'Habibi, serif' }}
               >
                 {loadingItems[product.id] ? (
                   <Oval height={20} width={20} color="#c7baf7" secondaryColor="#FFFFFF" visible={true} />
@@ -91,6 +92,13 @@ const CartPage = () => {
             <p>Total: ${calculateTotal().toFixed(2)}</p>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '20px' }}>
+            <button className="btn btn-primary" onClick={clear} disabled={loading}>
+              {loading ? (
+                <Oval height={20} width={20} color="#c7baf7" secondaryColor="#FFFFFF" visible={true} />
+              ) : (
+                'Vaciar carrito'
+              )}
+            </button>
             <button
               className="btn btn-primary"
               onClick={handleFinalizePurchase}
@@ -100,13 +108,6 @@ const CartPage = () => {
                 <Oval height={20} width={20} color="#c7baf7" secondaryColor="#FFFFFF" visible={true} />
               ) : (
                 'Finalizar compra'
-              )}
-            </button>
-            <button className="btn btn-primary" onClick={clear} disabled={loading}>
-              {loading ? (
-                <Oval height={20} width={20} color="#c7baf7" secondaryColor="#FFFFFF" visible={true} />
-              ) : (
-                'Vaciar carrito'
               )}
             </button>
           </div>
