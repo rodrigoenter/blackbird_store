@@ -87,7 +87,7 @@ const Checkout = () => {
         const { name, phone, email, confirmEmail } = buyer;
         if (!name || !phone || !email || !confirmEmail) {
             Swal.fire({
-                title: "Olvidaste tus datos :)",
+                title: "Olvidaste tus datos 🥴",
                 text: "Por favor, completalos para finalizar la compra.",
                 icon: "warning",
                 confirmButtonText: "OK",
@@ -99,9 +99,9 @@ const Checkout = () => {
         }
         if (email !== confirmEmail) {
             Swal.fire({
-                title: "¡Los correos no coinciden!",
-                text: "Por favor, asegúrate de que ambos correos sean iguales.",
-                icon: "error",
+                title: "Los correos no coinciden 😣",
+                text: "Por favor, verificá que ambos correos sean iguales.",
+                icon: "warning",
                 confirmButtonText: "OK",
                 customClass: {
                     confirmButton: "btn-primary",
@@ -123,16 +123,16 @@ const Checkout = () => {
         });
 
         doc.setFontSize(18);
-        doc.text("Detalles de la Orden", 14, 20);
+        doc.text("Detalles de tu pedido", 14, 20);
         doc.setFontSize(12);
-        doc.text(`Fecha de generación: ${formattedDate}`, 14, 30);
+        doc.text(`Fecha de compra: ${formattedDate}`, 14, 30);
 
-        doc.text(`ID de la Orden: ${orderId}`, 14, 40);
-        doc.text(`Nombre del comprador: ${order.buyer.name}`, 14, 50);
-        doc.text(`Teléfono del comprador: ${order.buyer.phone}`, 14, 60);
-        doc.text(`Email del comprador: ${order.buyer.email}`, 14, 70);
+        doc.text(`ID de la orden: ${orderId}`, 14, 40);
+        doc.text(`Nombre: ${order.buyer.name}`, 14, 50);
+        doc.text(`Teléfono: ${order.buyer.phone}`, 14, 60);
+        doc.text(`Email: ${order.buyer.email}`, 14, 70);
 
-        doc.text("Detalles de los Productos", 14, 90);
+        doc.text("Detalles de la compra", 14, 90);
         let startY = 100;
         order.items.forEach((item, index) => {
             const itemTotalPrice = item.quantity * item.price;
@@ -149,12 +149,11 @@ const Checkout = () => {
         doc.save(`orden_${orderId}.pdf`);
     };
 
-
     const handleCreateOrder = async () => {
         if (cart.length === 0) {
             Swal.fire({
                 title: "Error",
-                text: "El carrito está vacío. Por favor, añade productos antes de confirmar la compra.",
+                text: "El carrito está vacío. Por favor, añadí productos antes de confirmar la compra.",
                 icon: "warning",
                 confirmButtonText: "OK",
                 customClass: {

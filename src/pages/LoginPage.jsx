@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Oval } from 'react-loader-spinner';
 
 const styles = {
   container: {
@@ -37,6 +38,13 @@ const styles = {
     border: '1px solid #663399',
     outline: 'none',
   },
+  buttonContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: '20px',
+    gap: '15px',
+  },
   button: {
     marginTop: '30px',
     marginBottom: '30px',
@@ -49,6 +57,7 @@ const styles = {
     cursor: 'pointer',
     transition: 'background-color 0.3s ease, transform 0.3s ease',
     fontFamily: 'Habibi, serif',
+    textAlign: 'center',
   },
   buttonHover: {
     color: '#663399',
@@ -60,19 +69,12 @@ const styles = {
     textDecoration: 'none',
     textAlign: 'center',
     display: 'block',
-    marginTop: '10px',
+    marginTop: '20px',
   },
-  rememberMeLabel: {
-    fontSize: '14px',
-    color: '#000000',
+  loaderContainer: {
     display: 'flex',
-    alignItems: 'center',
     justifyContent: 'center',
-    width: '100%',
-    marginTop: '10px',
-  },
-  checkbox: {
-    marginRight: '10px',
+    marginTop: '20px',
   },
 };
 
@@ -81,14 +83,19 @@ const LoginPage = () => {
   const [password, setPassword] = useState('');
   const [isHover, setIsHover] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (email && password) {
-      navigate('/');
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        navigate('/');
+      }, 2000);
     } else {
-      alert('Por favor, complete todos los campos.');
+      alert('Por favor, completá todos los campos.');
     }
   };
 
@@ -96,7 +103,9 @@ const LoginPage = () => {
     <section style={styles.container}>
       <h2 style={styles.title}>Iniciar sesión 🔐</h2>
       <form onSubmit={handleSubmit} style={styles.form}>
-        <label htmlFor="email" style={styles.label}>Correo electrónico</label>
+        <label htmlFor="email" style={styles.label}>
+          Correo electrónico
+        </label>
         <input
           type="email"
           id="email"
@@ -105,7 +114,9 @@ const LoginPage = () => {
           required
           style={styles.input}
         />
-        <label htmlFor="password" style={styles.label}>Contraseña</label>
+        <label htmlFor="password" style={styles.label}>
+          Contraseña
+        </label>
         <input
           type="password"
           id="password"
@@ -132,11 +143,26 @@ const LoginPage = () => {
           }}
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
+          disabled={isLoading}
         >
-          Ingresar
+          {isLoading ? 'Ingresando...' : 'Ingresar'}
         </button>
       </form>
-      <a href="/login" style={styles.links}>¿Olvidaste tu contraseña?</a>
+      {isLoading && (
+        <div style={styles.loaderContainer}>
+          <Oval
+            height={40}
+            width={40}
+            color="#663399"
+            secondaryColor="#c7baf7"
+            strokeWidth={2}
+            strokeWidthSecondary={2}
+          />
+        </div>
+      )}
+      <a href="/login" style={styles.links}>
+        ¿Olvidaste tu contraseña?
+      </a>
     </section>
   );
 };

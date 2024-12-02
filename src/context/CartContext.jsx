@@ -24,7 +24,7 @@ const CartProvider = ({ children }) => {
 
     const showStockAlert = () => {
         Swal.fire({
-            title: 'Lo sentimos :(',
+            title: 'Lo sentimos 🥲',
             text: 'No puedes agregar más de 10 unidades de este producto al carrito.',
             icon: 'warning',
             confirmButtonText: 'OK',

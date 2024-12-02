@@ -51,7 +51,7 @@ const ItemListContainer = () => {
       case 'electro':
         return 'Electrónica de alta calidad ⚡';
       default:
-        return 'Bienvenid@s a nuestra tienda 🛒';
+        return 'Bienvenid@s a Blackbird 🛒';
     }
   };
 
