@@ -1,6 +1,6 @@
 ![Blackbird](https://iili.io/2a6xRnI.png "Blackbird Music Store")
 
-**¿Buscás un nuevo instrumento, un vinilo difícil de encontrar o simplemente querés explorar el mundo de la música? Blackbird Music Store es el lugar indicado para vos. Descubrí una selección cuidadosamente seleccionada de productos de las mejores marcas y encontrá todo lo que necesitas para liberar tu creatividad.**
+**¿Buscás un nuevo instrumento, un vinilo difícil de encontrar o simplemente querés explorar el mundo de la música? Blackbird Music Store es el lugar indicado para vos. Descubrí una colección cuidadosamente seleccionada de productos de las mejores marcas y encontrá todo lo que necesitas para liberar tu creatividad.**
 
 ###### **Este proyecto representa una página _ficticia_ sobre venta de artículos musicales, generada para el curso de React Js de la plataforma Coderhouse.**
 
@@ -88,7 +88,7 @@
 > Firebase: para gestionar el almacenamiento de datos en tiempo real, como la creación de colecciones de productos y ordenes de compra.
 `$ npm install firebase`
 
-#### En resumen, todas ellas me permitieron construir una web app moderna y dinámica, ofreciendo una mejor experiencia y simplificando el desarrollo en varios aspectos, desde la interfaz hasta la gestión de datos y la infraestructura.
+#### En resumen, todas ellas me permitieron construir una web app moderna y dinámica, ofreciendo una mejor experiencia y simplificando el desarrollo en varios aspectos, desde la interfaz hasta la gestión de datos y de la infraestructura.
 
 ##### Versión:
 
