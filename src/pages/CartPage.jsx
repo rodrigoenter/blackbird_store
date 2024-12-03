@@ -8,7 +8,7 @@ import React from 'react';
 const CartPage = () => {
   const { cart, removeItem, updateQuantity, clear, loading, loadingItems } = useCart();
   const navigate = useNavigate();
-  const [processingOrder, setProcessingOrder] = useState(false);
+  const [processingOrder] = useState(false);
 
   const calculateTotal = () => {
     return cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
@@ -96,7 +96,7 @@ const CartPage = () => {
               {loading ? (
                 <Oval height={20} width={20} color="#c7baf7" secondaryColor="#FFFFFF" visible={true} />
               ) : (
-                'Vaciar carrito'
+                '🗑️ Vaciar carrito'
               )}
             </button>
             <button

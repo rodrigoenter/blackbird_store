@@ -59,10 +59,12 @@ const styles = {
     marginTop: '30px',
     cursor: 'pointer',
     transition: 'background-color 0.3s ease, transform 0.3s ease',
+    fontFamily: "'Habibi', serif",
   },
   editButtonHover: {
     color: '#663399',
     backgroundColor: '#c7baf7',
+    fontFamily: "'Habibi', serif",
   },
   input: {
     padding: '10px',
@@ -76,15 +78,19 @@ const styles = {
 };
 
 const AccountPage = () => {
-  const [isHover, setIsHover] = useState(false);
+  const [isHoverEdit, setIsHoverEdit] = useState(false);
+  const [isHoverSave, setIsHoverSave] = useState(false);
   const [editing, setEditing] = useState(false);
-  const [userInfo, setUserInfo] = useState({
-    name: 'Juliet Burke',
-    email: 'juliet.burke@dharma.initiative.com',
-    phone: '+04 08 1516 2342',
-    address1: '4.137500, 162.061667',
-    payment: '**** **** **** 0815',
-    securityCode: '***',
+  const [userInfo, setUserInfo] = useState(() => {
+    const savedInfo = localStorage.getItem('userInfo');
+    return savedInfo ? JSON.parse(savedInfo) : {
+      name: 'Juliet Burke',
+      email: 'juliet.burke@dharma.initiative.com',
+      phone: '+04 08 1516 2342',
+      address1: '4.137500, 162.061667',
+      payment: '**** **** **** 0815',
+      securityCode: '***',
+    };
   });
 
   const handleEditClick = () => {
@@ -98,6 +104,7 @@ const AccountPage = () => {
 
   const handleSave = () => {
     setEditing(false);
+    localStorage.setItem('userInfo', JSON.stringify(userInfo));
     console.log('Saved:', userInfo);
   };
 
@@ -152,7 +159,7 @@ const AccountPage = () => {
             style={styles.input}
           />
         ) : (
-          <p style={styles.info}><strong>Dirección de evíos:</strong> {userInfo.address1}</p>
+          <p style={styles.info}><strong>Dirección de envíos:</strong> {userInfo.address1}</p>
         )}
       </div>
       <div style={styles.section}>
@@ -186,11 +193,12 @@ const AccountPage = () => {
         <button
           style={{
             ...styles.editButton,
-            ...(isHover ? styles.editButtonHover : {}),
+            ...(isHoverEdit ? styles.editButtonHover : {}),
             marginRight: '20px',
+            fontFamily: "'Habibi', serif",
           }}
-          onMouseEnter={() => setIsHover(true)}
-          onMouseLeave={() => setIsHover(false)}
+          onMouseEnter={() => setIsHoverEdit(true)}
+          onMouseLeave={() => setIsHoverEdit(false)}
           onClick={handleEditClick}
         >
           {editing ? 'Cancelar' : 'Editar Información'}
@@ -199,10 +207,11 @@ const AccountPage = () => {
           <button
             style={{
               ...styles.editButton,
-              ...(isHover ? styles.editButtonHover : {}),
+              ...(isHoverSave ? styles.editButtonHover : {}),
+              fontFamily: "'Habibi', serif",
             }}
-            onMouseEnter={() => setIsHover(true)}
-            onMouseLeave={() => setIsHover(false)}
+            onMouseEnter={() => setIsHoverSave(true)}
+            onMouseLeave={() => setIsHoverSave(false)}
             onClick={handleSave}
           >
             Guardar cambios

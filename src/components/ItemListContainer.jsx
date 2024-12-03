@@ -8,6 +8,7 @@ const ItemListContainer = () => {
   const { categoryId } = useParams();
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [showScrollButton, setShowScrollButton] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -40,6 +41,29 @@ const ItemListContainer = () => {
     fetchData();
   }, [categoryId]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
+
   const getCategoryContent = () => {
     switch (categoryId) {
       case 'musica':
@@ -59,6 +83,11 @@ const ItemListContainer = () => {
     <div className="item-list-container">
       <h1>{getCategoryContent()}</h1>
       {loading ? <p>Cargando productos...</p> : <ItemList products={items} />}
+      {showScrollButton && (
+        <button onClick={scrollToTop} className="scroll-to-top">
+          Volver al inicio
+        </button>
+      )}
     </div>
   );
 };
