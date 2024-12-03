@@ -11,7 +11,7 @@ const styles = {
     textAlign: 'left',
     border: '1px solid #f7f7f7',
     marginTop: '310px',
-    marginBottom: '30px',
+    marginBottom: '100px',
   },
   title: {
     fontSize: '28px',

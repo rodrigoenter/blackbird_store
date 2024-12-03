@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { Oval } from "react-loader-spinner";
 import { jsPDF } from "jspdf";
+import { fontFamily } from "@mui/system";
 
 const styles = {
     container: {
@@ -65,6 +66,7 @@ const styles = {
         cursor: "pointer",
         transition: "background-color 0.3s ease, transform 0.3s ease",
         textAlign: "center",
+        fontFamily: "'Habibi', serif",
     },
     buttonHover: {
         color: "#663399",
@@ -75,14 +77,20 @@ const styles = {
 const Checkout = () => {
     const { cart, clear, calculateTotal } = useCart();
     const navigate = useNavigate();
+
+    // Almacenar los datos del comprador
     const [buyer, setBuyer] = useState({ name: "", phone: "", email: "", confirmEmail: "" });
+
+    // Manejar el estado de procesamiento de la orden
     const [processingOrder, setProcessingOrder] = useState(false);
 
+    // Manejar los cambios en los inputs del formulario
     const handleChange = (e) => {
         const { name, value } = e.target;
         setBuyer((prev) => ({ ...prev, [name]: value }));
     };
 
+    // Validar el formulario antes de crear la orden
     const validateForm = () => {
         const { name, phone, email, confirmEmail } = buyer;
         if (!name || !phone || !email || !confirmEmail) {
@@ -112,6 +120,7 @@ const Checkout = () => {
         return true;
     };
 
+    // Generar PDF con los detalles de la orden
     const generatePDF = (orderId, order) => {
         const doc = new jsPDF();
 
@@ -149,6 +158,7 @@ const Checkout = () => {
         doc.save(`orden_${orderId}.pdf`);
     };
 
+    // Manejar la creación de la orden
     const handleCreateOrder = async () => {
         if (cart.length === 0) {
             Swal.fire({

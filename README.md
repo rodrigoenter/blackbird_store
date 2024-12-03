@@ -67,7 +67,7 @@
 ![AdobeIllustrator](https://img.icons8.com/color/96/000000/adobe-illustrator.png)
 
 
-##### En la búsqueda y desarrollo de mejorar la experiencia de usuario, he implementado algunas librerías que resultaron sumamente útiles para mi proyecto:
+#### En la búsqueda y desarrollo de mejorar la experiencia de usuario, he implementado algunas librerías que resultaron sumamente útiles para mi proyecto:
 
 > Materialize: para  integrar un diseño moderno y con una interfaz amigable.
 `$ npm install materialize-css@next`
@@ -88,7 +88,7 @@
 > Firebase: para gestionar el almacenamiento de datos en tiempo real, como la creación de colecciones de productos y ordenes de compra.
 `$ npm install firebase`
 
-##### En resumen, todas ellas me permitieron construir una web app moderna y dinámica, ofreciendo una mejor experiencia y simplificando el desarrollo en varios aspectos, desde la interfaz hasta la gestión de datos y la infraestructura.
+#### En resumen, todas ellas me permitieron construir una web app moderna y dinámica, ofreciendo una mejor experiencia y simplificando el desarrollo en varios aspectos, desde la interfaz hasta la gestión de datos y la infraestructura.
 
 ##### Versión:
 

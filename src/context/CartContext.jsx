@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import Swal from 'sweetalert2';
 
+// Contexto y LocalStorage
 const CartContext = createContext();
 
 const useCart = () => useContext(CartContext);
@@ -22,6 +23,7 @@ const CartProvider = ({ children }) => {
         return cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
     };
 
+    // Restricción para agregar más de 10 unidades
     const showStockAlert = () => {
         Swal.fire({
             title: 'Lo sentimos 🥲',
@@ -35,6 +37,7 @@ const CartProvider = ({ children }) => {
         });
     };
 
+    // Verificar si el producto está en el carrito / Actualizar cantidad
     const isInCart = (id) => {
         return cart.some((item) => item.id === id);
     };
@@ -81,6 +84,7 @@ const CartProvider = ({ children }) => {
         }
     };
 
+    // Eliminar un producto del carrito con sppiner/loading
     const removeItem = (productId) => {
         setLoadingItems((prevLoadingItems) => ({
             ...prevLoadingItems,
@@ -95,6 +99,7 @@ const CartProvider = ({ children }) => {
         }, 2000);
     };
 
+    // Vaciar carrito con sppiner/loading
     const clear = () => {
         setLoading(true);
         setTimeout(() => {
@@ -104,6 +109,7 @@ const CartProvider = ({ children }) => {
         }, 2000);
     };
 
+    // Proveer el contexto del carrito y sus funciones a los componentes hijos
     return (
         <CartContext.Provider
             value={{ cart, addItem, removeItem, updateQuantity, clear, isInCart, calculateTotal, loading, loadingItems }}

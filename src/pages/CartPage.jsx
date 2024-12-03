@@ -10,10 +10,12 @@ const CartPage = () => {
   const navigate = useNavigate();
   const [processingOrder] = useState(false);
 
+  // Calcular total de la compra sumando el precio por cantidad de productos.
   const calculateTotal = () => {
     return cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
   };
 
+  // Manejar el cambio de cantidades de productos en el carrito.
   const handleQuantityChange = (productId, increment) => {
     const product = cart.find((item) => item.id === productId);
     const newQuantity = increment ? product.quantity + 1 : product.quantity - 1;
@@ -27,6 +29,7 @@ const CartPage = () => {
     navigate('/');
   };
 
+  // Finaliza compra / Mensaje de carrito vacío
   const handleFinalizePurchase = () => {
     if (cart.length === 0) {
       Swal.fire({

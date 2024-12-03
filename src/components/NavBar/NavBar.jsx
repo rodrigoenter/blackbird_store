@@ -27,7 +27,7 @@ const NavBar = () => {
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
       >
-        {menuOpen ? '✖' : '☰'}
+        {menuOpen ? '✕' : '☰'}
       </button>
       <div className={`nav-links-container ${menuOpen ? 'open' : ''}`}>
         <div className="nav-links">

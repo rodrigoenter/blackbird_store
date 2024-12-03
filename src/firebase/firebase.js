@@ -10,6 +10,7 @@ import {
   deleteDoc
 } from "firebase/firestore";
 
+// Variables de entorno.
 const firebaseConfig = {
   apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
@@ -22,13 +23,13 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 
+// Nueva orden para la colección "orders"
 export async function createOrder(order) {
   const ordersCollection = collection(db, "orders");
   try {
     const docRef = await addDoc(ordersCollection, order);
-
+    // Actualizar el stock de productos después de crear la orden
     await updateProductStock(order.items);
-
     return docRef.id;
   } catch (error) {
     console.error("Error al crear la orden:", error.message || error);
@@ -36,6 +37,7 @@ export async function createOrder(order) {
   }
 }
 
+// Obtener todas las ordenes de la colección "orders"
 export async function getOrders() {
   try {
     const querySnapshot = await getDocs(collection(db, "orders"));
@@ -45,6 +47,7 @@ export async function getOrders() {
   }
 }
 
+// Actualizar una orden existente en la colección "orders"
 export async function updateOrder(id, updatedData) {
   const orderRef = doc(db, "orders", id);
   try {
@@ -55,6 +58,7 @@ export async function updateOrder(id, updatedData) {
   }
 }
 
+// Eliminar una orden de la colección "orders"
 export async function deleteOrder(id) {
   const orderRef = doc(db, "orders", id);
   try {
@@ -65,6 +69,7 @@ export async function deleteOrder(id) {
   }
 }
 
+// Actualizar el stock de productos en la colección "productos"
 async function updateProductStock(items) {
   const productsRef = collection(db, "productos");
 
@@ -81,6 +86,7 @@ async function updateProductStock(items) {
   }
 }
 
+// Verificar la disponibilidad de stock de los productos en el carrito
 export async function checkStockAvailability(cart) {
   const productsRef = collection(db, "productos");
 
@@ -110,6 +116,7 @@ export async function checkStockAvailability(cart) {
   return stockValidation;
 }
 
+// Obtener un producto específico de la colección "productos"
 export async function getProduct(productId) {
   const productRef = doc(db, "productos", productId);
   try {
